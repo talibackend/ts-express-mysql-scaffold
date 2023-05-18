@@ -20,4 +20,5 @@ export const messages = {
     ID_REQUIRED : "Id front and back are required.",
     USER_NOT_FOUND : "User not found.",
     USER_FOUND : "User found.",
+    USER_ALREADY_EXIST : "User already exists."
 };

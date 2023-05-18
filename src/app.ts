@@ -5,7 +5,7 @@ import cors from 'cors';
 import { sequelize } from './config/database';
 import { log } from './utils/logger';
 import { messages } from './utils/consts';
-import transferRoutes from './routes/transfer';
+import userRoutes from './routes/user.routes';
 
 
 const app : Express = express();
@@ -18,5 +18,5 @@ sequelize.sync({ alter : true }).then(async ()=>{
 app.use(cors({ origin : process.env.GATEWAY_BASE_URL }));
 app.use(express.json({ limit : '50mb' }));
 
-app.use('/', transferRoutes);
+app.use('/user', userRoutes);
 
