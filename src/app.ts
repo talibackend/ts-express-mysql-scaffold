@@ -21,7 +21,7 @@ const swaggerOptions = {
       title : "Documentation for virtual pay"
     }
   },
-  apis : [ __dirname+'/swagger/*.js' ],
+  apis : [ __dirname+'/routes/*.js' ],
   components : {
     securitySchemes : {
       bearerAuth : {

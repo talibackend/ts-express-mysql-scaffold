@@ -8,7 +8,7 @@ export const createUserService = async (payload : CreateUserType): Promise<Respo
     const { name } = payload;
     let user = await User.findOne({ where : { name } });
 
-    if(!user){
+    if(user){
         throw { ok : false, message : messages.USER_ALREADY_EXIST, status : StatusCodes.BAD_REQUEST };
     }
 
