@@ -1,7 +1,5 @@
 import { Sequelize } from "sequelize-typescript";
-import { TemporaryAccountDetails } from "../models/TemporaryAccountDetails";
-import { Transaction } from "../models/Transaction";
-import { Wallet } from "../models/Wallet";
+import { User } from '../models/User';
 
 export const sequelize = new Sequelize({
     dialect: 'mysql',
@@ -13,7 +11,5 @@ export const sequelize = new Sequelize({
 });
 
 sequelize.addModels([
-    TemporaryAccountDetails,
-    Wallet,
-    Transaction
+    User
 ]);
